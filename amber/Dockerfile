@@ -4,7 +4,7 @@
 
 FROM node:lts-alpine
 
-ENV AMBER_VERSION 1.0.1
+ENV AMBER_VERSION 1.0.2
 
 WORKDIR /usr/src/app
 
