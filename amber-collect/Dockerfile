@@ -5,7 +5,7 @@
 # release stage
 FROM node:lts-alpine as release-stage
 
-ENV AMBER_COLLECT_VERSION 1.0.1
+ENV AMBER_COLLECT_VERSION 1.0.2
 
 WORKDIR /app
 
