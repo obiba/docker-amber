@@ -5,7 +5,7 @@
 # release stage
 FROM node:lts-alpine as release-stage
 
-ENV AMBER_STUDIO_VERSION 1.0.3
+ENV AMBER_STUDIO_VERSION 1.0.4
 
 WORKDIR /app
 
@@ -16,5 +16,3 @@ RUN set -x && \
   mv amber-studio-${AMBER_STUDIO_VERSION}/* . && \
   mv amber-studio-${AMBER_STUDIO_VERSION}/.eslint* amber-studio-${AMBER_STUDIO_VERSION}/.postcssrc.js . && \
   rm -rf amber-studio-${AMBER_STUDIO_VERSION}
-
-RUN yarn global add @quasar/cli
