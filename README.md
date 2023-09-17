@@ -1,12 +1,11 @@
 Docker Amber
 ============
 
-[Docker](https://docs.docker.com/) images for Amber server and apps, see: [amber](https://github.com/obiba/amber), [amber-studio](https://github.com/obiba/amber-studio) and [amber-collect](https://github.com/obiba/amber-collect).
+[Docker](https://docs.docker.com/) images for Amber server and apps, see: [amber](https://github.com/obiba/amber), [amber-studio](https://github.com/obiba/amber-studio), [amber-collect](https://github.com/obiba/amber-collect) and [amber-visit](https://github.com/obiba/amber-visit).
 
 These are base images that needs to be extended up for amending and building the apps.
 
 A template repository is provided to showcase how to extend and customize these Docker images: [amber-template](https://github.com/obiba/amber-template)
-
 
 Amber server Dockerfile
 -----------------------
@@ -41,3 +40,16 @@ Optionally, some source files can be modified as well:
 * [src/css](https://github.com/obiba/amber-collect/tree/main/src/css) folder that contains the [SCSS](https://sass-lang.com/documentation/syntax) files.
 
 The `Dockerfile` for a production web server providing the Amber Collect app will then look like: [Amber Collect template](https://github.com/obiba/amber-template/tree/master/amber-collect)
+
+Amber Visit app Dockerfile
+----------------------------
+
+Amber Collect is a [Quasar SPA](https://quasar.dev/quasar-cli-vite/developing-spa/introduction) (single page application) web app delivered by a [NGINX](https://www.nginx.com/) web server. The web app **must** be built with the site specific settings such as the Amber server URL and the [reCAPTCHA](https://developers.google.com/recaptcha/) site key.
+
+Optionally, some source files can be modified as well:
+
+* [settings.json](https://github.com/obiba/amber-visit/blob/main/settings.json) file that is a simple way of tweaking the default theme and for adding new languages.
+* [public](https://github.com/obiba/amber-visitt/tree/main/public) folder that contains the app icons.
+* [src/css](https://github.com/obiba/amber-visit/tree/main/src/css) folder that contains the [SCSS](https://sass-lang.com/documentation/syntax) files.
+
+The `Dockerfile` for a production web server providing the Amber Visit app will then look like: [Amber Visit template](https://github.com/obiba/amber-template/tree/master/amber-visit)
