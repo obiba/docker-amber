@@ -5,14 +5,14 @@
 # release stage
 FROM node:lts-alpine as release-stage
 
-ENV AMBER_VISIT_VERSION 1.0.0
+ENV AMBER_VISIT_BRANCH main
 
 WORKDIR /app
 
 RUN set -x && \
-  wget -q -O amber-visit.zip https://github.com/obiba/amber-visit/archive/refs/tags/${AMBER_VISIT_VERSION}.zip && \
+  wget -q -O amber-visit.zip https://github.com/obiba/amber-visit/archive/refs/heads/${AMBER_VISIT_BRANCH}.zip && \
   unzip -q amber-visit.zip && \
   rm amber-visit.zip && \
-  mv amber-visit-${AMBER_VISIT_VERSION}/* . && \
-  mv amber-visit-${AMBER_VISIT_VERSION}/.eslint* . && \
-  rm -rf amber-visit-${AMBER_VISIT_VERSION}
+  mv amber-visit-${AMBER_VISIT_BRANCH}/* . && \
+  mv amber-visit-${AMBER_VISIT_BRANCH}/.eslint* . && \
+  rm -rf amber-visit-${AMBER_VISIT_BRANCH}

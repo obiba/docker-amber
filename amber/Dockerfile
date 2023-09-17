@@ -4,15 +4,15 @@
 
 FROM node:lts-alpine
 
-ENV AMBER_VERSION 1.0.3
+ENV AMBER_BRANCH main
 
 WORKDIR /usr/src/app
 
 RUN set -x && \
-  wget -q -O amber.zip https://github.com/obiba/amber/archive/refs/tags/${AMBER_VERSION}.zip && \
+  wget -q -O amber.zip https://github.com/obiba/amber/archive/refs/heads/${AMBER_BRANCH}.zip && \
   unzip -q amber.zip && \
   rm amber.zip && \
-  mv amber-${AMBER_VERSION} amber
+  mv amber-${AMBER_BRANCH} amber
 
 WORKDIR /usr/src/app/amber
 
