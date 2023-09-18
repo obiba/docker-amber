@@ -9,6 +9,8 @@ help:
 	@echo sudo make all
 	@echo make push-all
 
+snapshots: all push-all
+
 all:
 	cd amber && docker build --no-cache=true -t="obiba/amber:$(tag)" .
 	cd amber-studio && docker build --no-cache=true -t="obiba/amber-studio:$(tag)" .
