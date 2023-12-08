@@ -3,7 +3,7 @@
 #
 
 # release stage
-FROM node:lts-alpine as release-stage
+FROM node:18-alpine as release-stage
 
 ENV AMBER_VISIT_VERSION 1.0.0
 
