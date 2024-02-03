@@ -3,7 +3,7 @@
 #
 
 # release stage
-FROM node:18-alpine as release-stage
+FROM node:20-alpine as release-stage
 
 ENV AMBER_VISIT_VERSION 1.0.0
 
@@ -14,5 +14,6 @@ RUN set -x && \
   unzip -q amber-visit.zip && \
   rm amber-visit.zip && \
   mv amber-visit-${AMBER_VISIT_VERSION}/* . && \
+  mv amber-visit-${AMBER_VISIT_VERSION}/.yarn* . && \
   mv amber-visit-${AMBER_VISIT_VERSION}/.eslint* . && \
   rm -rf amber-visit-${AMBER_VISIT_VERSION}

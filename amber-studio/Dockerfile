@@ -3,7 +3,7 @@
 #
 
 # release stage
-FROM node:18-alpine as release-stage
+FROM node:20-alpine as release-stage
 
 ENV AMBER_STUDIO_VERSION 1.1.0
 
@@ -14,5 +14,6 @@ RUN set -x && \
   unzip -q amber-studio.zip && \
   rm amber-studio.zip && \
   mv amber-studio-${AMBER_STUDIO_VERSION}/* . && \
+  mv amber-studio-${AMBER_STUDIO_VERSION}/.yarn* . && \
   mv amber-studio-${AMBER_STUDIO_VERSION}/.eslint* amber-studio-${AMBER_STUDIO_VERSION}/.postcssrc.js . && \
   rm -rf amber-studio-${AMBER_STUDIO_VERSION}
