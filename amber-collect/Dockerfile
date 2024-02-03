@@ -3,7 +3,7 @@
 #
 
 # release stage
-FROM node:18-alpine as release-stage
+FROM node:20-alpine as release-stage
 
 ENV AMBER_COLLECT_BRANCH main
 
@@ -14,5 +14,6 @@ RUN set -x && \
   unzip -q amber-collect.zip && \
   rm amber-collect.zip && \
   mv amber-collect-${AMBER_COLLECT_BRANCH}/* . && \
+  mv amber-collect-${AMBER_COLLECT_BRANCH}/.yarn* . && \
   mv amber-collect-${AMBER_COLLECT_BRANCH}/.eslint* amber-collect-${AMBER_COLLECT_BRANCH}/.postcssrc.js . && \
   rm -rf amber-collect-${AMBER_COLLECT_BRANCH}
