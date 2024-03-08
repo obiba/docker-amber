@@ -1,7 +1,8 @@
 #
 # Docker helper
 #
-
+tag=1.1
+vtag=1.0
 no_cache=false
 
 help:
