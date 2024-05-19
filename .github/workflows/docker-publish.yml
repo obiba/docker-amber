@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REGISTRY: index.docker.io
-      IMAGE_NAME: obiba/amber
+      IMAGE_NAME: obiba/amber-collect
     permissions:
       id-token: write
       contents: read
