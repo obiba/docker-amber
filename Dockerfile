@@ -5,7 +5,7 @@
 # release stage
 FROM node:20-alpine as release-stage
 
-ENV AMBER_COLLECT_VERSION 1.1.2
+ENV AMBER_COLLECT_VERSION 1.1.3
 
 WORKDIR /app
 
