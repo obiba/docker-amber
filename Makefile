@@ -1,10 +1,10 @@
 #
 # Docker helper
 #
-tag=1.2
-stag=1.2
-ctag=1.1
-vtag=1.0
+tag=1.4
+stag=1.4
+ctag=1.2
+vtag=1.2
 no_cache=false
 
 help:
