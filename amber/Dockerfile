@@ -2,9 +2,9 @@
 # Amber server Dockerfile
 #
 
-FROM node:lts-alpine
+FROM node:22-alpine
 
-ENV AMBER_VERSION=1.4.0
+ENV AMBER_VERSION=1.4.1
 
 WORKDIR /usr/src/app
 
